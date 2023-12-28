@@ -1,6 +1,7 @@
 package hellojpa;
 
-import domain.Member;
+import domain.Test;
+import domain.member.Member;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -18,10 +19,13 @@ public class JpaMain {
 
         try {
             Member member = new Member();
-            member.setId(2L);
-            member.setName("Hello");
+            member.setAge(13);
+
+            Test test = new Test("sdf");
 
             entityManager.persist(member);
+            entityManager.persist(test);
+
 
             tx.commit();
         } catch (Exception e){
