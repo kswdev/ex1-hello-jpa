@@ -1,12 +1,14 @@
 package hellojpa;
 
-import domain.Test;
 import domain.member.Member;
+import domain.member.Team;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import java.util.List;
+import java.util.Objects;
 
 public class JpaMain {
 
@@ -18,14 +20,26 @@ public class JpaMain {
         tx.begin();
 
         try {
+            Team team = new Team("TeamA");
+            entityManager.persist(team);
+
             Member member = new Member();
-            member.setAge(13);
-
-            Test test = new Test("sdf");
-
+            member.setUsername("member1");
+            member.setTeam(team);
             entityManager.persist(member);
-            entityManager.persist(test);
 
+            entityManager.flush();
+            entityManager.clear();
+
+            Member findMember = entityManager.find(Member.class, member.getId());
+
+            List<Member> members = findMember.getTeam().getMembers();
+
+            System.out.println("==========================================================");
+            System.out.println(members.size());
+            for (Member m : members) {
+                System.out.println("m = " + m.getUsername());
+            }
 
             tx.commit();
         } catch (Exception e){
