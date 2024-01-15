@@ -1,14 +1,11 @@
 package hellojpa;
 
-import domain.member.Member;
-import domain.member.Team;
+import domain.item.Movie;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
-import java.util.List;
-import java.util.Objects;
 
 public class JpaMain {
 
@@ -20,29 +17,26 @@ public class JpaMain {
         tx.begin();
 
         try {
-            Team team = new Team("TeamA");
-            entityManager.persist(team);
 
-            Member member = new Member();
-            member.setUsername("member1");
-            member.setTeam(team);
-            entityManager.persist(member);
+            Movie movie = new Movie();
+            movie.setDirector("Tom");
+            movie.setActor("Click");
+            movie.setName("바람");
+            movie.setPrice(10000);
+
+            entityManager.persist(movie);
 
             entityManager.flush();
             entityManager.clear();
 
-            Member findMember = entityManager.find(Member.class, member.getId());
+            System.out.println("==========================");
 
-            List<Member> members = findMember.getTeam().getMembers();
-
-            System.out.println("==========================================================");
-            System.out.println(members.size());
-            for (Member m : members) {
-                System.out.println("m = " + m.getUsername());
-            }
+            Movie findMovie = entityManager.find(Movie.class, movie.getId());
+            System.out.println(findMovie);
 
             tx.commit();
         } catch (Exception e){
+            e.printStackTrace();
             tx.rollback();
         } finally {
             entityManager.close();
