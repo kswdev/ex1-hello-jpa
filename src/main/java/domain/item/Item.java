@@ -1,10 +1,11 @@
 package domain.item;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
-//@Inheritance(strategy = InheritanceType.JOINED) 조인전략
+@Inheritance(strategy = InheritanceType.JOINED)
 //@Inheritance(strategy = InheritanceType.SINGLE_TABLE) 단일 테이블 전략
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+//@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @DiscriminatorColumn
 @Entity
 public abstract  class Item {

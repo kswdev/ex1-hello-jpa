@@ -1,5 +1,6 @@
 package domain.member;
 
+import domain.BaseEntity;
 import domain.product.MemberProduct;
 
 import javax.persistence.*;
@@ -13,7 +14,7 @@ import java.util.List;
         initialValue = 1, allocationSize = 50
 )
 @Entity
-public class Member {
+public class Member extends BaseEntity {
     @Id @GeneratedValue
     @Column(name = "MEMBER_ID")
     private Long id;

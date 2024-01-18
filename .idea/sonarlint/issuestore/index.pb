@@ -1,10 +1,16 @@
 
-:
-
-.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 Å
 Q.idea/sonarlint/securityhotspotstore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302,3\0\30205a209c6ce77c4cfc19a09e6f57c588b7fb88
 w
 G.idea/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302,e\d\ed67eb178d523a4b3f117dcbe0eda5196367ceec
 Y
 )src/main/java/domain/member/RoleType.java,6\3\63d68ebc20096649abb598f26f58867140da16ee
+_
+/src/main/java/domain/product/MemberProduct.java,1\d\1d5de58d5eceebd26e47f9e1bc7201a4a332f133
+Y
+)src/main/java/domain/product/Product.java,a\d\ad31b7d327d9deff91d201fd3149bb91e9676bd9
+U
+%src/main/java/domain/member/Team.java,2\d\2de91e5f918da0aecad10e394a57d9bd8d91bdf3
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
