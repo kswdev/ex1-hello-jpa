@@ -9,8 +9,6 @@ _
 /src/main/java/domain/product/MemberProduct.java,1\d\1d5de58d5eceebd26e47f9e1bc7201a4a332f133
 Y
 )src/main/java/domain/product/Product.java,a\d\ad31b7d327d9deff91d201fd3149bb91e9676bd9
-U
-%src/main/java/domain/member/Team.java,2\d\2de91e5f918da0aecad10e394a57d9bd8d91bdf3
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
