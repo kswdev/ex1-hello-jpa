@@ -25,6 +25,16 @@ public class Member extends BaseEntity {
     @Column(name = "USERNAME")
     private String username;
 
+    private int age;
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "TEAM_ID")
     private Team team;
@@ -61,7 +71,7 @@ public class Member extends BaseEntity {
     )
     private List<Adress> adressHistory = new ArrayList<>();*/
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     @JoinColumn(name = "MEMBER_ID")
     private List<AddressEntity> addressHistory = new ArrayList<>();
 
@@ -116,5 +126,16 @@ public class Member extends BaseEntity {
     public void changeTeam(Team team) {
         this.team = team;
         team.getMembers().add(this); //양방향 편의 메서드
+    }
+
+    @Override
+    public String toString() {
+        return "Member{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", age=" + age +
+                ", workPeriod=" + workPeriod +
+                ", favoriteFoods=" + favoriteFoods +
+                '}';
     }
 }
