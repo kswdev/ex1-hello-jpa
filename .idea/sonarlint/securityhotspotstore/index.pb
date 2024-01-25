@@ -24,8 +24,6 @@ T
 $src/main/java/domain/item/Movie.java,e\3\e313b44808dd95960803994aea875c870427fef5
 U
 %src/main/java/domain/member/Team.java,2\d\2de91e5f918da0aecad10e394a57d9bd8d91bdf3
-S
-#src/main/java/hellojpa/JpaMain.java,3\8\3818751ba7a7e2bbfde51b6c3126a02f97f5a644
 W
 'src/main/java/domain/cascade/Child.java,7\4\74626f82d8165a3a493c74c39f876b874c5985a3
 ^
@@ -44,3 +42,7 @@ c
 3src/main/java/hellojpa/value_type/valueExample.java,3\2\320e877c94540edcf378272edbb703547cb22759
 ^
 .src/main/java/domain/member/AddressEntity.java,9\c\9c5d59714c870bdda47b20031b52d625c7acbb92
+Z
+*src/main/java/hellojpa/proxy/JpaProxy.java,f\a\fa5ab280698b7b55aaddba6343234e454e27840e
+f
+6src/main/java/hellojpa/query/criteria/JpaCriteria.java,1\f\1fba150f22cd7f1d677691a21fc0c2f286870270

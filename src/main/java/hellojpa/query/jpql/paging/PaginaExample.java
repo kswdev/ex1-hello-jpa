@@ -21,7 +21,7 @@ public class PaginaExample {
 
             for (int i = 0; i < 100; i++) {
                 Member member = new Member();
-                member.setUsername("member" + i);
+                member.setUsername("member" + i%10);
                 member.setAge(i);
                 em.persist(member);
             }
@@ -29,7 +29,7 @@ public class PaginaExample {
             em.flush();
             em.clear();
 
-            List<Member> resultList = em.createQuery("select m from Member m order by m.age desc", Member.class)
+            List<Member> resultList = em.createQuery("select m from Member m order by m.age ASC", Member.class)
                     .setFirstResult(1)
                     .setMaxResults(10)
                     .getResultList();
