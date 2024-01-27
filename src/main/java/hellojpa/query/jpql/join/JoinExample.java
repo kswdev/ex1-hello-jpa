@@ -35,9 +35,10 @@ public class JoinExample {
             em.flush();
             em.clear();
 
-            List<Member> resultList = em.createQuery("select m from Member m inner join m.team t", Member.class).getResultList();
+            List<Member> resultList =
+                    em.createQuery("select m from Member m", Member.class).getResultList();
 
-            System.out.println(resultList);
+            System.out.println(resultList.get(0).getTeam().getName());
 
             tx.commit();
         } catch (Exception e){
