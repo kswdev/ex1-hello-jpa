@@ -22,8 +22,6 @@ S
 #src/main/java/domain/item/Item.java,5\b\5b68e257acb39af65cda56080230b1a3e657dc3e
 T
 $src/main/java/domain/item/Movie.java,e\3\e313b44808dd95960803994aea875c870427fef5
-U
-%src/main/java/domain/member/Team.java,2\d\2de91e5f918da0aecad10e394a57d9bd8d91bdf3
 W
 'src/main/java/domain/cascade/Child.java,7\4\74626f82d8165a3a493c74c39f876b874c5985a3
 ^
@@ -46,3 +44,7 @@ Z
 *src/main/java/hellojpa/proxy/JpaProxy.java,f\a\fa5ab280698b7b55aaddba6343234e454e27840e
 f
 6src/main/java/hellojpa/query/criteria/JpaCriteria.java,1\f\1fba150f22cd7f1d677691a21fc0c2f286870270
+^
+.src/main/java/hellojpa/query/jpql/JpaJqpl.java,5\3\53f59b2089e2190e7b967dc1a954cdc75dbd73e0
+U
+%src/main/java/domain/member/Team.java,2\d\2de91e5f918da0aecad10e394a57d9bd8d91bdf3
